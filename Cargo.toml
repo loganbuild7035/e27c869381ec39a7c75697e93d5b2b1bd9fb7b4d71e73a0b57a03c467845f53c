@@ -1,0 +1,4 @@
+[package]
+name = "rate_meter_6250dc"
+version = "0.0.0"
+edition = "2021"
